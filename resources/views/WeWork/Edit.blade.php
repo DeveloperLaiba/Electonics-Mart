@@ -1,0 +1,23 @@
+@extends('AdminPanel.Layout.layout')
+@section('content')
+<main class="mt-5 pt-3">
+    <div class="container-fluid">
+        <form method="POST" action="{{route('update.WeWork',$wework->id)}}" enctype="multipart/form-data">
+            @csrf
+            <label for="">Heading</label>
+            <input type="text" name="heading1" id="heading1" required value="{{$wework->heading1}}">
+            <br><br>
+            <label for="">Heading</label>
+            <input type="text" name="heading2" id="heading2" required value="{{$wework->heading2}}">
+            <br><br>
+            <label for="">Paragraph</label>
+            <input type="text" name="paragraph" id="paragraph" required value="{{$wework->paragraph}}">
+            <br><br>
+            <label for="">Button</label>
+            <input type="text" name="button" id="button" required value="{{$wework->button}}">
+            <br><br>
+            <button type="submit"> Submit</button>
+        </form>
+    </div>
+</main>
+@endsection
